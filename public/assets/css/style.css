@@ -1,0 +1,351 @@
+/***************************************************************************************************************
+||||||||||||||||||||||||||||       MASTER STYLESHEET FOR Exam Web App           ||||||||||||||||||||||||||||||||||
+****************************************************************************************************************
+||||||||||||||||||||||||||||              TABLE OF CONTENT                  ||||||||||||||||||||||||||||||||||||
+****************************************************************************************************************
+****************************************************************************************************************
+* 1. imported styles 
+* 2. miscelnious styles 
+* 3. header styles 
+
+****************************************************************************************************************
+||||||||||||||||||||||||||||            End TABLE OF CONTENT                ||||||||||||||||||||||||||||||||||||
+****************************************************************************************************************/
+/************************** 
+
+* 1. imported styles 
+***************************/
+
+@import url(main.css);
+
+/************************** 
+* 2. miscelnious styles 
+***************************/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(font-family);
+    background: var(--color-bg);
+}
+
+a,
+a:hover,
+a:visited,
+a:focus,
+a:active {
+    color: unset;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+.section__padding {
+    padding: 20px 50px;
+}
+
+.section__margin {
+    margin: 4rem 6rem;
+}
+
+.flex__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app__wrapper_info {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.app__wrapper_img {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.app__wrapper_img-reverse {
+    justify-content: flex-start;
+    margin-right: 2rem;
+}
+
+.app__wrapper_img img {
+    width: 80%;
+}
+
+.text-center{
+    text-align: center;
+}
+.head__text {
+    font-family: var(--font-family);
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 44px;
+    letter-spacing: 0.0025em;
+}
+
+.p__head {
+    font-family: var(--font-family);
+    color: var(--color-secondary);
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 55px;
+    letter-spacing: -0.005em;
+}
+
+.label__text {
+    font-family: var(--font-family);
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 700px) {
+    .section__padding {
+        padding: 4rem 4rem;
+    }
+
+    .section__margin {
+        margin: 4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .section__padding {
+        padding: 4rem 2rem;
+    }
+
+    .section__margin {
+        margin: 4rem 2rem;
+    }
+}
+
+.acct-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    border: 2px solid var(--color-secondary);
+    outline: none;
+    display: flex;
+    color: var(--color-white);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    line-height: 48px;
+    letter-spacing: 0.0025em;
+}
+
+.acct-btn:hover {
+    transition: var(--transition);
+    background-color: var(--color-primary);
+    border: none;
+}
+
+/* .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #FF4328;
+    color: #fff;
+    font-size: 17px;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    -webkit-box-shadow: 0px 23px 42px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 23px 42px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+  .scroll-to-top:hover {
+    background: #FEC931;
+    color: #212121;
+  } */
+
+/*--------------------------------------------------------------
+  ##  Header
+  --------------------------------------------------------------*/
+
+header {
+    background-color: var(--color-white);
+    padding-top: 20px !important;
+    border-radius: 50px 50px 0 0;
+}
+
+.navbar__desktop{
+    gap: 30px;
+}
+.navbar__mobile{
+    display: none;
+}
+.navbar__links__menu {
+    gap: 20px;
+}
+
+.navbar__links__menu>li {
+    list-style: none;
+}
+
+.navbar__links__menu-links a {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
+    font-family: var(--font-family);
+    color: var(--color-primary);
+}
+.navbar__btn{
+    gap: 10px;
+}
+.navbar__btn-btn{
+    border-radius: 25px;
+    padding: 10px 41px;
+    outline: none;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.0125em;
+    color: var(--color-white);
+    background-color: transparent;
+}
+.navbar__btn-signup{
+    background-color: var(--color-secondary);
+}
+.navbar__btn-signup:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    transition: var(--transition);
+    cursor: pointer;
+}
+.navbar__btn-login:hover{
+    background-color: var(--color-secondary);
+    border: none;
+    color: var(--color-white);
+    transition: var(--transition);  
+    cursor: pointer;
+}
+.navbar__btn-login{
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+}
+
+.toggle__btn{
+    background-color: var(--color-secondary);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.toggle__btn-dash{
+    width: 80%;
+    height: 2px;
+    background-color: var(--color-white);
+}
+
+.signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup__img{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup__img img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.signup__content{
+    height: 100%;
+    width: 50%;
+    padding: 10px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.signup__content-fields{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form__containers{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100% !important;
+}
+
+.signup__content-fields form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form__containers input{
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid var(--color-secondary);
+    width: 100%;
+    padding: 15px 10px;
+    outline: none;
+}
+
+.signup__login{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.signup__login a{
+    color: var(--color-secondary);
+}
